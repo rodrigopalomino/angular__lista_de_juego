@@ -1,0 +1,32 @@
+<app-navbar></app-navbar>
+
+<div class="container-fluid px-3">
+  <div class="mt-3">
+    <form class="row">
+      <div class="col-10">
+        <input type="text" class="form-control" placeholder="Nombre" />
+      </div>
+      <div class="col-2 d-grid">
+        <button class="btn btn-primary">buscar</button>
+      </div>
+    </form>
+  </div>
+
+  @if (pagina) {
+  <div class="d-flex mt-4">
+    <div class="w-25">
+      <app-filtros></app-filtros>
+    </div>
+    <div style="width: 60%">
+      <app-juegos
+        [pagina]="pagina"
+        [consolas]="consolas"
+        [generos]="generos"
+      ></app-juegos>
+    </div>
+  </div>
+  }
+</div>
+
+<!-- <app-filtros></app-filtros>
+<app-juegos></app-juegos> -->

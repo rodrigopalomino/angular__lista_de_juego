@@ -1,0 +1,19 @@
+.card {
+  height: 23rem;
+}
+
+.card-img {
+  min-height: 18rem;
+  padding: 0 0.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card .card-img img {
+  max-height: 100%;
+}
+
+.card .card-title {
+  font-size: 18px;
+}
