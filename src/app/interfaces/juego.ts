@@ -5,4 +5,6 @@ export interface Juego {
   imagen: string;
   descripcion: string;
   desarrolladora: string;
+  consolas?: string;
+  generos?: string;
 }

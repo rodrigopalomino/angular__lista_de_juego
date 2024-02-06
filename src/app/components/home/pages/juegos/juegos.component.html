@@ -2,7 +2,7 @@
   @if(juegos){ @for (juego of juegos; track juego.juego_id) {
 
   <div class="col-12 col-md-6 col-lg-4 col-xl-3 g-4">
-    <div class="card">
+    <div class="card" (click)="click(juego.nombre)">
       <div class="card-img">
         <img src="{{ juego.imagen }}" class="card-img-top" />
       </div>
@@ -15,6 +15,12 @@
   } }
 </div>
 
+<nav class="navigation my-4">
+  <ul class="pagination">
+    <li class="page-link" (click)="anterior()">Anterior</li>
+    <li class="page-link" (click)="siguiente()">Siguiente</li>
+  </ul>
+</nav>
 <!--
 Extra Pequeño	Ninguno	<576px
 Pequeño	sm	≥576px

@@ -12,6 +12,10 @@ export class JuegoService {
 
   constructor(private http: HttpClient) {}
 
+  getJuego(nombre: string): Observable<Juego> {
+    return this.http.get<Juego>(`${this.myApi}${this.myApp}/${nombre}`);
+  }
+
   getJuegos(
     inicio: number,
     cantidad: number,
@@ -31,5 +35,17 @@ export class JuegoService {
       generos,
       consolas,
     });
+  }
+
+  //http://localhost:3001/juego/search/g?inicio=0&cantidad=9
+
+  searchJuego(
+    nombre: string,
+    inicio: number,
+    cantidad: number
+  ): Observable<Juego[]> {
+    return this.http.get<Juego[]>(
+      `${this.myApi}${this.myApp}/search/${nombre}?inicio=${inicio}&cantidad=${cantidad}`
+    );
   }
 }

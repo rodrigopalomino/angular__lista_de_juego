@@ -1,3 +1,19 @@
-body {
-  border: 1px solid red;
+.filtros {
+  background: black;
+  color: white;
+}
+
+hr {
+  margin: 0;
+  padding: 0;
+  background: white;
+  width: 100%;
+}
+
+.lista {
+  background: black;
+}
+
+.lista span {
+  display: block;
 }
